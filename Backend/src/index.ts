@@ -7,6 +7,7 @@ import myUserRoute from "./routes/MyUserRoute";
 import { ErroMiddleware } from "./middleware/error";
 import { v2 as cloudinary } from "cloudinary";
 import myRestaurantRoute from "./routes/MyRestaurantRoute";
+import restaurantRoute from "./routes/RestaurantRoute";
 mongoose
   .connect(process.env.mongoDb_url as string)
   .then(() => {
@@ -31,7 +32,7 @@ app.get("/health", async (req: Request, res: Response, next: NextFunction) => {
 
 app.use("/api/my/user", myUserRoute);
 app.use("/api/my/restaurant", myRestaurantRoute);
-
+app.use("/api/restaurant", restaurantRoute);
 app.listen(7000, () => {
   console.log("server started at port 7000");
 });

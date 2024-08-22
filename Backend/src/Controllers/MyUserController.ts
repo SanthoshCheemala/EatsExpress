@@ -38,6 +38,7 @@ export const updateCurrentUser = CatchAsyncErrors(
       user.addressLine1 = addressLine1;
       user.country = country;
       user.city = city;
+      user.isNew = true;
       user.save();
       res.send();
     } catch (error: any) {
